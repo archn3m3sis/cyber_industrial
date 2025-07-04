@@ -5,10 +5,10 @@ import reflex as rx
 from rxconfig import config
 
 ### page route imports...
-from cyber_industrial.page.index import index
+from cyber_industrial.page.home import home
 
 ### application instantiation...
 app = rx.App()
 
 ### application page routing...
-app.add_page(index)
+app.add_page(home, route="/")
