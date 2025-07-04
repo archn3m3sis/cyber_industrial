@@ -3,8 +3,10 @@ name = "cyber-industrial"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
+    "cryptography>=45.0.5",
     "numpy>=2.3.1",
     "pandas>=2.3.0",
+    "psutil>=7.0.0",
     "reflex==0.8.0",
     "reflex-ag-grid>=0.0.11",
     "reflex-altair>=0.1.1",
