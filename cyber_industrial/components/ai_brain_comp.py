@@ -1,10 +1,10 @@
 import reflex as rx 
 from reflex import Var
 from typing import Optional
-from .spline import Spline
+from .ai_brain_spline import Spline
 
 spline=Spline.create
-def wave_spline() -> rx.Component:
+def splinecall() -> rx.Component:
     return rx.center(
         spline(),
         overflow="hidden",
@@ -14,6 +14,5 @@ def wave_spline() -> rx.Component:
         position="absolute",
         sticky="True",
     )
-
 
 

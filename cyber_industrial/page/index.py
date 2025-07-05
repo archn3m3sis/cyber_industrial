@@ -1,22 +1,8 @@
 import reflex as rx
-from cyber_industrial.components.wavespline import wave_spline
+from cyber_industrial.layout.bg_layout_aibrain import BackgroundLayout
 
 def index() -> rx.Component:
-    return rx.box(
-        # Background wave
-        rx.box(
-            wave_spline(),
-            style={
-                "position": "absolute",
-                "zIndex": 0,
-                "top": 0,
-                "left": 0,
-                "width": "100vw",
-                "height": "100vh",
-                "overflow": "hidden",
-            },
-        ),
-        # Foreground content
+    return BackgroundLayout(
         rx.container(
             rx.heading(
                 "IAMS",
@@ -31,8 +17,8 @@ def index() -> rx.Component:
                 "position": "relative",
                 "zIndex": 1,
                 "width": "fit-content",
-                "align": "center",
+                "align_items": "center",
+                "margin": "0 auto",
             },            
-            ),
-
         ),
+    )
