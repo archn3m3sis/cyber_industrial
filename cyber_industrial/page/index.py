@@ -1,5 +1,6 @@
 import reflex as rx
 from cyber_industrial.layout.bg_layout_aibrain import BackgroundLayout
+from reflex_type_animation import type_animation
 
 def index() -> rx.Component:
     return BackgroundLayout(
@@ -10,8 +11,11 @@ def index() -> rx.Component:
                 color="gray",
                 align="center",
             ),
-            rx.text(
-                "Next Generation Asset "
+            type_animation(
+                sequence=[
+                    "The quick brown fox jumped over the lazy Dog",
+                    800
+                ]
             ),
             style={
                 "position": "relative",
@@ -22,3 +26,5 @@ def index() -> rx.Component:
             },            
         ),
     )
+
+
